@@ -1,0 +1,72 @@
+// Global variables
+//
+// Base font styles for headings and links.
+
+// Vars for colors
+$colors: (
+    '$white': #fff,
+    '$black': #000,
+    '$mostly-black': #232323,
+    '$dark-blue': #24282f,
+    '$gray': #2b2f35,
+    '$m-gray': #6e7279,
+    '$l-gray': #f7f7f7,
+    '$gold': #b5a263
+);
+
+// Global vars for body typography
+$base: (
+  'base-font-sans-serif': unquote("'Raleway', Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'base-text-color': map-get($colors, '$black'),
+  'base-background-color': map-get($colors, '$white'),
+  'base-link-color': map-get($colors, '$m-gray'),
+  'base-font-size': 14px,
+  'base-line-height': 1.716,
+  'base-font-family': unquote("'Open Sans', 'Times New Roman', Times, Baskerville, Georgia, serif"),
+  'vertical-rhythm': '(map-get($base, base-line-height) * 1em)',
+  'base-min-width': 320px
+);
+
+// For headers
+$headings: (
+  'sizes': (
+    'h1-font-size': 40px,
+    'h2-font-size': 27px,
+    'h3-font-size': 24px,
+    'h4-font-size': 21px,
+    'h5-font-size': 16px,
+    'h6-font-size': 14px
+  ),
+  'fonts': (
+      'headings-font-family':  map-get($base, 'base-font-sans-serif'),
+    'headings-color': map-get($colors, '$dark-blue'),
+  )
+);
+
+// Vars for forms
+$forms: (
+  'form-element-padding': unquote("9px 12px 10px"),
+  'form-element-border-color': map-get($colors, '$m-gray'),
+  'form-element-focus-border-color': map-get($colors, '$white'),
+  'placeholder-color': map-get($colors, '$m-gray')
+);
+
+// Breakpoints for include media mixin
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 980px,
+  'widescreen': 1200px
+);
+
+// Keywords for include media mixin
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
